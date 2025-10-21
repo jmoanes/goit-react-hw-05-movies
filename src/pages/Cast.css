@@ -1,0 +1,241 @@
+.cast-section {
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #667eea;
+  text-align: center;
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cast-member {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cast-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cast-image-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.cast-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cast-member:hover .cast-image {
+  transform: scale(1.05);
+}
+
+.cast-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.actor-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.6em;
+}
+
+.character-name {
+  font-size: 0.9rem;
+  color: #667eea;
+  margin: 0;
+  font-weight: 500;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.4em;
+}
+
+.cast-note {
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.error-message,
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6c757d;
+}
+
+.error-message h3,
+.empty-state h3 {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.error-message p,
+.empty-state p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .cast-image-container {
+    height: 200px;
+  }
+  
+  .cast-info {
+    padding: 0.75rem;
+  }
+  
+  .actor-name {
+    font-size: 0.9rem;
+  }
+  
+  .character-name {
+    font-size: 0.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .cast-image-container {
+    height: 160px;
+  }
+  
+  .cast-info {
+    padding: 0.5rem;
+  }
+  
+  .actor-name {
+    font-size: 0.8rem;
+    min-height: 2.4em;
+  }
+  
+  .character-name {
+    font-size: 0.75rem;
+    min-height: 2.2em;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .cast-member {
+    background: #2d3748;
+  }
+  
+  .cast-image-container {
+    background: #1a202c;
+  }
+  
+  .actor-name {
+    color: #e2e8f0;
+  }
+  
+  .character-name {
+    color: #4dabf7;
+  }
+  
+  .section-title {
+    color: #e2e8f0;
+    border-bottom-color: #4dabf7;
+  }
+  
+  .cast-note {
+    background: #1a202c;
+    color: #a0aec0;
+    border-left-color: #4dabf7;
+  }
+  
+  .error-message h3,
+  .empty-state h3 {
+    color: #e2e8f0;
+  }
+  
+  .error-message,
+  .empty-state {
+    color: #a0aec0;
+  }
+}
+
+/* Animation for cast members */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cast-member {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.cast-member:nth-child(1) { animation-delay: 0.1s; }
+.cast-member:nth-child(2) { animation-delay: 0.2s; }
+.cast-member:nth-child(3) { animation-delay: 0.3s; }
+.cast-member:nth-child(4) { animation-delay: 0.4s; }
+.cast-member:nth-child(5) { animation-delay: 0.5s; }
+.cast-member:nth-child(6) { animation-delay: 0.6s; }
