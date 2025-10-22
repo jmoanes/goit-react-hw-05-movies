@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { fetchPopularMovies } from '../api';
-import MovieList from '../components/MovieList';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorBoundary from '../components/ErrorBoundary';
+import MovieList from '../components/MovieList'; // Reusable movie list component
+import LoadingSpinner from '../components/LoadingSpinner'; // Loading indicator component
+import ErrorBoundary from '../components/ErrorBoundary'; // Error boundary component
 import './Home.css';
 
 /**

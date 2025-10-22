@@ -1,5 +1,5 @@
-import React from 'react';
-import './LoadingSpinner.css';
+import React from 'react'; // Import React library
+import './LoadingSpinner.css'; // Import corresponding CSS file
 
 /**
  * Loading Spinner Component
