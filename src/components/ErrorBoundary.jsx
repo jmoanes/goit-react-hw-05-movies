@@ -2,11 +2,9 @@ import React from 'react';
 import './ErrorBoundary.css';
 
 /**
- * Error Boundary Component
- * 
- * Catches JavaScript errors anywhere in the child component tree,
- * logs those errors, and displays a fallback UI instead of the component tree that crashed.
- */
+ * Error Boundary Component, Catches JavaScript errors anywhere in the child component tree,
+ * logs those errors, and displays a fallback UI instead of the component tree that crashed. */
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);

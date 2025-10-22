@@ -1,9 +1,5 @@
-/**
- * TMDB API Configuration and Service Functions
- * 
- * This module provides a centralized API service for interacting with The Movie Database (TMDB) API.
- * It includes proper error handling, request configuration, and response processing.
- */
+
+//  TMDB API Configuration and Service Functions 
 
 // API Configuration
 const API_KEY = 'da723509c4378165545cfe968b843f21';
