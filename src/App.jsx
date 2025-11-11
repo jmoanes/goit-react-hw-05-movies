@@ -32,10 +32,12 @@ const App = () => {
 
   useEffect(() => {
     const lastPage = localStorage.getItem('lastVisitedPage');
-    if (lastPage && lastPage !== location.pathname) {
-      navigate(lastPage);
+    // Only navigate if we have a stored page and it's different from current
+    // Also ensure we don't navigate to invalid paths
+    if (lastPage && lastPage !== location.pathname && lastPage.startsWith('/')) {
+      navigate(lastPage, { replace: true });
     }
-  }, []); // run once
+  }, []); // run once on mount
 
   // Save favorites to localStorage whenever they change
   useEffect(() => {
